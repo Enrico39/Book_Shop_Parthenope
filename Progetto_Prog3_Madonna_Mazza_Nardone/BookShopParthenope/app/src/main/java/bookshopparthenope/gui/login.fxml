@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="641.0" style="-fx-background-color: #ffffff;" stylesheets="@fxcss.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookshopparthenope.LoginController">
+   <children>
+      <Canvas height="200.0" width="200.0" />
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="641.0">
+         <children>
+            <Label layoutX="158.0" layoutY="7.0" text="Book Shop Parthenope" textFill="#fba500">
+               <font>
+                  <Font name="Calibri Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="26.0" layoutY="64.0" prefHeight="383.0" prefWidth="349.0">
+         <children>
+            <ImageView fitHeight="284.0" fitWidth="282.0" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="372.0" layoutY="78.0" prefHeight="243.0" prefWidth="265.0">
+         <children>
+            <Label layoutX="61.0" layoutY="24.0" text="Effettua l'accesso!" textFill="#35A4FB">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="loginScelta" layoutX="39.0" layoutY="61.0" prefHeight="40.0" prefWidth="188.0" promptText="Tipo Utente" stylesheets="@fxcss.css" />
+            <TextField fx:id="username" layoutX="39.0" layoutY="104.0" promptText="Username" stylesheets="@fxcss.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password" layoutX="39.0" layoutY="154.0" onAction="#validateLogin" promptText="Password" stylesheets="@fxcss.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" alignment="CENTER" layoutX="50.0" layoutY="197.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="34.0" prefWidth="165.0" style="-fx-background-color: #ffa100; -fx-border-color: black;" stylesheets="@fxcss.css" text="Accedi" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Text fx:id="wrongLogIn" fill="RED" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="inserisci tutte le credenziali" textAlignment="CENTER" visible="false" wrappingWidth="265.5999999999999">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="429.0" layoutY="333.0" prefHeight="77.0" prefWidth="151.0">
+         <children>
+            <Hyperlink fx:id="signupButton" layoutX="17.0" layoutY="39.0" onAction="#switchToSignup" stylesheets="@fxcss.css" text="Registrati ora!" textFill="#35A4FB">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="15.0" layoutY="14.0" text="Non sei registrato? ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
