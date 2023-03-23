@@ -1,6 +1,6 @@
 # Book Shop Parthenope
 
-![projectLogo](app/src/main/java/bookshopparthenope/gui/images/logoapp.png)
+![projectLogo](BookShopParthenope/app/src/main/java/bookshopparthenope/gui/images/logoapp.png)
 
 ## Progetto di Programmazione III - Università "Parthenope" 
 
