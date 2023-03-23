@@ -1,0 +1,8 @@
+bookshopparthenope
+bookshopparthenope.Model.BookManagement
+bookshopparthenope.Model.BookManagement.Category
+bookshopparthenope.Model.BookManagement.Subcategory
+bookshopparthenope.Model.CartManagement
+bookshopparthenope.Model.LoginRegisterManagementDAO
+bookshopparthenope.Model.PaymentManagement
+bookshopparthenope.Model.UserManagement

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1059.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookshopparthenope.PaymentController">
+   <children>
+      <AnchorPane prefHeight="708.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="25.0" layoutY="36.0">
+               <image>
+                  <Image url="@images/logoapp.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="25.0" layoutY="246.0" prefHeight="200.0" prefWidth="150.0" spacing="30.0">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToHome" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: #fba500; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" stylesheets="@fxcss.css" text="Home">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profileButton" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: #fba500; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" stylesheets="@fxcss.css" text="Profilo">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="cartButton" layoutX="37.0" layoutY="609.0" mnemonicParsing="false" onAction="#switchToCart" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #fba500; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@fxcss.css" text="Torna al carrello" AnchorPane.bottomAnchor="51.799999999999955">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="52.0" prefHeight="569.0" prefWidth="866.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="506.0" layoutY="1.0" prefHeight="653.0" prefWidth="317.0" style="-fx-border-color: white;">
+               <children>
+                  <ImageView fx:id="cartImage" fitHeight="222.0" fitWidth="229.0" layoutX="79.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/purchase-2.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="creditMethod" layoutX="-2.0" layoutY="270.0" prefHeight="381.0" prefWidth="350.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="13.0" prefHeight="60.0" prefWidth="348.0" text="Pagamento con Carta" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pCartNumber" layoutX="35.0" layoutY="90.0" prefHeight="35.0" prefWidth="213.0" promptText="Numero Carta" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pCartNome" layoutX="34.0" layoutY="181.0" prefHeight="40.0" prefWidth="294.0" promptText="Nome Titolare" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="22.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pCartCvv" layoutX="257.0" layoutY="90.0" prefHeight="35.0" prefWidth="67.0" promptText="CVV" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="90.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="pCartMm" layoutX="35.0" layoutY="135.0" prefHeight="35.0" prefWidth="80.0" promptText="MM" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.leftAnchor="35.0" />
+                        <ComboBox fx:id="pCartAaaa" layoutX="136.0" layoutY="135.0" prefHeight="35.0" prefWidth="88.0" promptText="AAAA" style="-fx-background-color: white; -fx-border-color: black;" />
+                        <Label alignment="CENTER" layoutX="113.0" layoutY="128.0" prefHeight="46.0" prefWidth="26.0" text="/">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="cashMethod" layoutX="5.0" layoutY="204.0" prefHeight="421.0" prefWidth="347.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="111.0" prefHeight="187.0" prefWidth="291.0" text="Pagherai il totale dell'ordine direttamente al corriere, quando sarà effettuata la consegna all'indirizzo che hai scelto per la spedizione." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="92.0" prefHeight="34.0" prefWidth="304.0" text="Pagamento in Contanti" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="80.0" layoutY="51.0" text="Riepilogo Ordine" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" layoutX="115.0" layoutY="102.0" prefHeight="42.0" prefWidth="216.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Label fx:id="idArticoli" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="35.0" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="35.0" text="€">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="288.0" layoutY="140.0" prefHeight="42.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Label fx:id="idTotal11" alignment="BOTTOM_RIGHT" prefHeight="35.0" text="4,90">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="35.0" text="€">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="183.0" layoutY="229.0" prefHeight="24.0" prefWidth="147.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="228.0">
+                     <children>
+                        <Label fx:id="idTotal" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="35.0" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="35.0" text="€">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator layoutX="27.0" layoutY="215.0" prefHeight="4.0" prefWidth="301.0" />
+                  <Label layoutX="29.0" layoutY="230.0" prefHeight="36.0" prefWidth="166.0" text="Totale ordine:  " AnchorPane.topAnchor="229.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="bancomatMethod" layoutX="-3.0" layoutY="245.0" prefHeight="269.0" prefWidth="362.0" visible="false" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="244.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="40.0" prefHeight="60.0" prefWidth="340.0" text="Pagamento con Bancomat" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pBancomatNumero" layoutX="32.0" layoutY="115.0" prefHeight="35.0" prefWidth="213.0" promptText="Numero Carta" AnchorPane.leftAnchor="32.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pBancomatNome" layoutX="31.0" layoutY="206.0" prefHeight="40.0" prefWidth="294.0" promptText="Nome Titolare" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="37.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pBancomatCvv" layoutX="254.0" layoutY="115.0" prefHeight="35.0" prefWidth="67.0" promptText="CVV" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="115.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="pBancomatMm" layoutX="32.0" layoutY="160.0" prefHeight="35.0" prefWidth="80.0" promptText="MM" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.leftAnchor="32.0" />
+                        <ComboBox fx:id="pBancomatAaaa" layoutX="133.0" layoutY="160.0" prefHeight="35.0" prefWidth="88.0" promptText="AAAA" style="-fx-background-color: white; -fx-border-color: black;" />
+                        <Label layoutX="116.0" layoutY="153.0" prefHeight="46.0" prefWidth="22.0" text="/">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="TOP_RIGHT" layoutX="128.0" layoutY="173.0" prefHeight="42.0" prefWidth="205.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Label fx:id="idExtra" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="35.0" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="35.0" text="€">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="buy" disable="true" layoutX="96.0" layoutY="544.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buyConfirm" prefHeight="21.0" prefWidth="160.0" style="-fx-background-color: #35A4FB; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-text-fill: white;" text="Acquista" AnchorPane.bottomAnchor="50.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <VBox layoutX="25.0" layoutY="111.0" prefHeight="100.0" prefWidth="181.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="88.0" text="Articoli:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="192.0" text="Costi di spedizione:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="100.0" text="Costi extra:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label fx:id="errorPay" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="487.0" prefHeight="60.0" prefWidth="325.0" text="Compila tutti i campi per effettuare il pagamento." textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="28.0" layoutY="63.0" prefHeight="233.0" prefWidth="445.0">
+               <children>
+                  <TextField fx:id="citta" layoutX="51.0" layoutY="45.0" prefHeight="35.0" prefWidth="223.0" promptText="Città">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="cap" layoutX="280.0" layoutY="45.0" prefHeight="35.0" prefWidth="117.0" promptText="CAP">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="via" layoutX="50.0" layoutY="100.0" prefHeight="35.0" prefWidth="276.0" promptText="Via">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="nr" layoutX="332.0" layoutY="100.0" prefHeight="35.0" prefWidth="63.0" promptText="Nr.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="-1.0" layoutY="-9.0" prefHeight="32.0" prefWidth="446.0" text="1. Inserisci un Indirizzo di spedizione corretto." wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="checkShipInfo" layoutX="50.0" layoutY="152.0" mnemonicParsing="false" onAction="#checkShip" prefHeight="35.0" prefWidth="346.0" style="-fx-background-color: #35A4FB; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: white;" text="Spedisci a questo indirizzo" />
+                  <Label fx:id="errorShipment" layoutX="53.0" layoutY="194.0" text="Inserisci correttamente i campi obbligatori." textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="28.0" layoutY="309.0" prefHeight="218.0" prefWidth="446.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="-2.0" prefHeight="32.0" prefWidth="392.0" text="2. Seleziona un Metodo di Pagamento *" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="115.0" layoutY="58.0" prefHeight="150.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="cashButton" disable="true" mnemonicParsing="false" onAction="#setCash" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #35A4FB; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: white;" text="Contanti" />
+                        <Button fx:id="creditButton" disable="true" mnemonicParsing="false" onAction="#setCredit" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #35A4FB; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: white;" text="Carta di Credito" />
+                        <Button fx:id="bancomatButton" disable="true" mnemonicParsing="false" onAction="#setBancomat" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: #35A4FB; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: white;" text="Bancomat" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Label layoutX="57.0" layoutY="538.0" prefHeight="71.0" prefWidth="387.0" text="* La scelta del metodo di pagamento con contanti comporterà un sovrapprezzo del 5% sul totale dell'ordine." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="510.0" orientation="VERTICAL" prefHeight="666.0" prefWidth="6.0" />
+            <Separator layoutY="-81.0" orientation="VERTICAL" prefHeight="746.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="859.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="239.0" layoutY="7.0" text="Book Shop Parthenope" textFill="#fba500">
+               <font>
+                  <Font name="Calibri Bold" size="34.0" />
+               </font>
+            </Label>
+            <Separator layoutX="2.0" layoutY="48.0" prefHeight="4.0" prefWidth="866.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
